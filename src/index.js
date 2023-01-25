@@ -6,7 +6,7 @@ import App from './App'
 ReactDOM.render(
   <React.StrictMode>
     <div style={{alignContent:'center', width:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
-      <h1 >Dev crash</h1>
+      <h1 >Dev Crush</h1>
       <App />
     </div>
    
