@@ -5,7 +5,11 @@ import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div style={{alignContent:'center', width:'100%', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center'}}>
+      <h1 >Dev crash</h1>
+      <App />
+    </div>
+   
   </React.StrictMode>,
   document.getElementById('root')
 )

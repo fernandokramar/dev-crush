@@ -190,7 +190,7 @@ const App = () => {
     const randomColorArrangement = [];
     for (let i = 0; i < width * width; i++) {
       const randomColor =
-      tecColors[Math.floor(Math.random() * tecColors.length)];
+        tecColors[Math.floor(Math.random() * tecColors.length)];
       randomColorArrangement.push(randomColor);
     }
     setCurrentColorArrangement(randomColorArrangement);
@@ -220,25 +220,29 @@ const App = () => {
   ]);
 
   return (
-    <div className="app">
+    <div className="app" >
       <div className="game">
         {currentColorArrangement.map((candyColor, index) => (
-          <img
-            key={index}
-            src={candyColor}
-            alt={candyColor}
-            data-id={index}
-            draggable={true}
-            onDragStart={dragStart}
-            onDragOver={(e) => e.preventDefault()}
-            onDragEnter={(e) => e.preventDefault()}
-            onDragLeave={(e) => e.preventDefault()}
-            onDrop={dragDrop}
-            onDragEnd={dragEnd}
-          />
+          <div style={{ padding: "5px", borderStyle: "solid", borderWidth: 2, borderRadius: 20 }}>
+            <img
+              key={index}
+              src={candyColor}
+              alt={candyColor}
+              data-id={index}
+              draggable={true}
+              onDragStart={dragStart}
+              onDragOver={(e) => e.preventDefault()}
+              onDragEnter={(e) => e.preventDefault()}
+              onDragLeave={(e) => e.preventDefault()}
+              onDrop={dragDrop}
+              onDragEnd={dragEnd}
+            />
+          </div>
         ))}
       </div>
-      <ScoreBoard score={scoreDisplay} />
+      <div style={{ position: "absolute", left: "65%"}}>
+        <ScoreBoard score={scoreDisplay} />
+      </div>
     </div>
   );
 };

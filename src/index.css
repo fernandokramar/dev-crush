@@ -1,13 +1,15 @@
 .app {
   display: flex;
   padding: 30px;
+  align-content: center;
 }
 
 .game {
-  width: 560px;
-  height: 560px;
+  width: 700px;
+  height: 700px;
   display: flex;
   flex-wrap: wrap;
+  position: "relative"
 }
 
 .game img {
